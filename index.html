@@ -8,9 +8,16 @@
     <title>PaintJS</title>
 </head>
 <body>
-    <canvas class="canvas"></canvas>
+    <canvas id="jsCanvas" class="canvas"></canvas>
     <div class="controls">
-        <div class="controls__colors">
+        <div class="controls__range">
+            <input type="range" id="jsRangeThickness" min="0.1" max="5.0" value="2.5" step="0.1" />
+        </div>
+        <div class="controls__btns">
+            <button id="jsButtonMode">Fill</button>
+            <button id="jsButtonSave">Save</button>
+        </div>
+        <div id ="jsDivColors" class="controls__colors">
             <div class="controls__color" style="background: #2C2C2C"></div>
             <div class="controls__color" style="background: white"></div>
             <div class="controls__color" style="background: #FF3B30"></div>
