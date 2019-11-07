@@ -8,25 +8,33 @@
     <title>PaintJS</title>
 </head>
 <body>
+    <!-- 
+        The <canvas> element
+        When no width and height attributes are specified, the canvas will initially be 300 pixels wide and 150 pixels high. 
+        The element can be sized arbitrarily by CSS, 
+        but during rendering the image is scaled to fit its layout size: if the CSS sizing doesn't respect the ratio of the initial canvas, it will appear distorted.
+        Note: If your renderings seem distorted, 
+        try specifying your width and height attributes explicitly in the <canvas> attributes, and not using CSS.
+    -->
     <canvas id="jsCanvas" class="canvas" width="700" height="700"></canvas>
     <div class="controls">
         <div class="controls__range">
             <input type="range" id="jsRangeThickness" min="0.1" max="5.0" value="2.5" step="0.1" />
         </div>
         <div class="controls__btns">
-            <button id="jsButtonMode">Fill</button>
-            <button id="jsButtonSave">Save</button>
+            <button id="jsButtonMode">PAINT</button>
+            <button id="jsButtonSave">SAVE</button>
         </div>
-        <div id ="jsDivColors" class="controls__colors">
-            <div class="controls__color" style="background: #2C2C2C"></div>
-            <div class="controls__color" style="background: white"></div>
-            <div class="controls__color" style="background: #FF3B30"></div>
-            <div class="controls__color" style="background: #FF9500"></div>
-            <div class="controls__color" style="background: #FFCC00"></div>
-            <div class="controls__color" style="background: #4CD963"></div>
-            <div class="controls__color" style="background: #5AC8FA"></div>
-            <div class="controls__color" style="background: #0579FF"></div>
-            <div class="controls__color" style="background: #5856D6"></div>
+        <div id ="jsColors" class="controls__colors">
+            <div class="controls__color jsColor" style="background: #2C2C2C"></div>
+            <div class="controls__color jsColor" style="background: white"></div>
+            <div class="controls__color jsColor" style="background: #FF3B30"></div>
+            <div class="controls__color jsColor" style="background: #FF9500"></div>
+            <div class="controls__color jsColor" style="background: #FFCC00"></div>
+            <div class="controls__color jsColor" style="background: #4CD963"></div>
+            <div class="controls__color jsColor" style="background: #5AC8FA"></div>
+            <div class="controls__color jsColor" style="background: #0579FF"></div>
+            <div class="controls__color jsColor" style="background: #5856D6"></div>
         </div>
     </div>
     <script src="app.js"></script>
